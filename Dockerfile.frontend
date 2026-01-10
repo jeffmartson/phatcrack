@@ -12,7 +12,7 @@ RUN npm install
 COPY ./frontend ./
 RUN npm run build-only
 
-FROM caddy:2-alpine
+FROM caddy:2.11-alpine
 
 COPY --from=builder /app/dist /srv
 COPY Caddyfile /etc/caddy/Caddyfile
