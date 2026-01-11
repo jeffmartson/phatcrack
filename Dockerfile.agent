@@ -11,7 +11,7 @@ RUN go mod download -x
 WORKDIR /app/agent
 RUN bash build.sh
 
-FROM caddy:2-alpine
+FROM caddy:2.11-alpine
 
 WORKDIR /usr/share/caddy
 RUN rm index.html
